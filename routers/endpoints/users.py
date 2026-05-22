@@ -2,10 +2,10 @@ from typing import Annotated
 
 from fastapi import APIRouter, Depends, Query
 
-from app.api.deps import DbSession, require_normal_user
-from app.models.user import User
-from app.schemas.user import UserResponse
-from app.services.user_service import search_users
+from deps import DbSession, require_normal_user
+from models.user import User
+from schemas.user import UserResponse
+from services.user_service import search_users
 
 router = APIRouter()
 

@@ -3,11 +3,11 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.exc import IntegrityError
 
-from app.api.deps import DbSession, require_admin
-from app.models.user import User
-from app.schemas.user import UserCreateAdmin, UserResponse
-from app.services.todo_service import delete_todo, get_todo_by_id
-from app.services.user_service import create_user, delete_user, get_user_by_id
+from deps import DbSession, require_admin
+from models.user import User
+from schemas.user import UserCreateAdmin, UserResponse
+from services.todo_service import delete_todo, get_todo_by_id
+from services.user_service import create_user, delete_user, get_user_by_id
 
 router = APIRouter()
 

@@ -2,7 +2,7 @@ from datetime import datetime
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from app.schemas.user import UserResponse
+from schemas.user import UserResponse
 
 
 class TodoCreate(BaseModel):

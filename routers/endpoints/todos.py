@@ -2,17 +2,17 @@ from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 
-from app.api.deps import DbSession, require_normal_user
-from app.models.user import User
-from app.schemas.todo import PaginatedTodos, TodoCreate, TodoResponse, TodoShareRequest, TodoShareResponse
-from app.services.todo_service import (
+from deps import DbSession, require_normal_user
+from models.user import User
+from schemas.todo import PaginatedTodos, TodoCreate, TodoResponse, TodoShareRequest, TodoShareResponse
+from services.todo_service import (
     create_todo,
     delete_todo,
     get_owned_todo,
     list_accessible_todos,
     share_todo,
 )
-from app.services.user_service import get_user_by_id
+from services.user_service import get_user_by_id
 
 router = APIRouter()
 
